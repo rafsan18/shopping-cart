@@ -29,15 +29,20 @@ iPhone11MinusBtn.addEventListener("click", function () {
 // Plus Button Event Handler iPhone 11 Case
 
 const iPhone11CaseAddBtn = document.getElementById("iPhone11CaseAddBtn");
+const iPhone11CasePrice = document.getElementById("iPhone11CasePrice")
+  .innerText;
+const iPhone11CasePriceNumber = parseFloat(iPhone11CasePrice);
 iPhone11CaseAddBtn.addEventListener("click", function () {
   //quantity
   const iPhoneCaseQuantity = quantity("iPhone11CaseQuantity") + 1;
   document.getElementById("iPhone11CaseQuantity").value = iPhoneCaseQuantity;
 
   // Increase in total individual price
+  const totalIndividualPrice = iPhone11CasePriceNumber * iPhoneCaseQuantity;
+  document.getElementById("iPhone11CasePrice").innerText = totalIndividualPrice;
 });
 
-// Minus Button Event Handler iPhone 11
+// Minus Button Event Handler iPhone 11 Case
 
 const iPhone11CaseMinusBtn = document.getElementById("iPhone11CaseMinusBtn");
 iPhone11CaseMinusBtn.addEventListener("click", function () {
@@ -46,6 +51,8 @@ iPhone11CaseMinusBtn.addEventListener("click", function () {
   document.getElementById("iPhone11CaseQuantity").value = iPhoneCaseQuantity;
 
   // decrease in total individual price
+  const totalIndividualPrice = iPhone11CasePriceNumber * iPhoneCaseQuantity;
+  document.getElementById("iPhone11CasePrice").innerText = totalIndividualPrice;
 });
 
 // function
